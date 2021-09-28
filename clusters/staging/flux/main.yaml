@@ -1,7 +1,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
-  name: marceleza
+  name: daronco
   namespace: flux-system
 spec:
   interval: 1m0s
@@ -10,7 +10,7 @@ spec:
   secretRef:
     name: git-credentials
   timeout: 20s
-  url: https://github.com/mmmarceleza/mykind.git
+  url: https://github.com/daronco/mykind.git
 
 ---
 apiVersion: v1
@@ -34,7 +34,7 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: marceleza
+    name: daronco
     namespace: flux-system
 
 # ---
